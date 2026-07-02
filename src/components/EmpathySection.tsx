@@ -52,6 +52,7 @@ export default function EmpathySection() {
             src="/empathy.png"
             alt="Barefoot walking in the forest"
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className={styles.empathyImage}
           />
         </motion.div>

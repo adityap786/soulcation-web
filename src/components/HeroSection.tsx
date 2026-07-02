@@ -35,6 +35,7 @@ export default function HeroSection() {
             src="https://res.cloudinary.com/tpd0b4xt/image/upload/v1783021140/tirthan-valley_qqcntz.jpg"
             alt="Lush green landscapes of Tirthan Valley"
             fill
+            priority
             unoptimized
             sizes="100vw"
             style={{ objectPosition: "center 75%" }}
