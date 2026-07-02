@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footerGrid}>
         <div className={styles.footerCol}>
-          <div style={{ position: "relative", width: "300px", maxWidth: "100%", height: "100px", marginBottom: "0.5rem" }}>
+          <div style={{ position: "relative", width: "450px", maxWidth: "100%", height: "150px", marginBottom: "0.5rem" }}>
             <Image 
               src="/ChatGPT Image Jul 3, 2026, 01_26_11 AM.png"
               alt="Soul Cation Logo"
