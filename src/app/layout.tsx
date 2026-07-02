@@ -6,11 +6,13 @@ import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  preload: false,
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  preload: false,
 });
 
 export const metadata: Metadata = {
