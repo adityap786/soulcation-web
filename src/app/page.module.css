@@ -961,11 +961,12 @@
 
 @media (max-width: 768px) {
   .formSection {
-    padding: var(--spacing-2xl) 5vw;
+    padding: var(--spacing-xl) 1rem;
   }
   .formWrapper {
-    padding: var(--spacing-lg);
+    padding: 1.5rem 1rem;
     border-radius: 1rem;
+    width: 100%;
   }
   .formHeader {
     margin-bottom: var(--spacing-lg);
@@ -1003,6 +1004,7 @@
   padding: var(--spacing-2xl);
   border-radius: 2rem;
   border: 1px solid rgba(0,0,0,0.05);
+  width: 100%;
 }
 
 .inputGroup {
@@ -1075,11 +1077,18 @@
 }
 
 @media (max-width: 768px) {
+  .inputField {
+    width: 100%;
+    min-width: 100%;
+  }
+
   .inputField input,
   .inputField select,
   .inputField textarea {
-    padding: 1.25rem 1rem;
+    padding: 1rem;
     font-size: 16px; /* 16px prevents automatic zoom on iOS Safari */
+    width: 100%;
+    min-width: 100%;
   }
 
   .formSubmitButton {
