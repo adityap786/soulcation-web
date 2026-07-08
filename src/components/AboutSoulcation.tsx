@@ -18,47 +18,38 @@ const features = [
 export default function AboutSoulcation() {
   return (
     <section className={styles.aboutSection}>
-      <div className={styles.aboutContainer}>
+      <div className={styles.aboutContainerGrid}>
+        {/* Left Column */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className={styles.aboutHeader}
+          className={styles.aboutTextColumn}
         >
           <h2 className={styles.aboutSuperTitle}>What is Soulcation?</h2>
           <h3 className={styles.aboutTitle}>A Vacation for Your Soul</h3>
           <p className={styles.aboutText}>
-            Soulcation Retreat is where wellness meets travel and meaningful experiences.
+            Soulcation Retreat is where wellness meets travel. The name combines Soul + Vacation—a journey designed to nourish your body, mind, and soul.
           </p>
           <p className={styles.aboutText}>
-            The name “Soulcation” combines Soul + Vacation—a journey that nourishes not just your body, but your mind and soul.
-            We believe a retreat shouldn’t only be about yoga. It should be about exploring breathtaking destinations, creating unforgettable memories, meeting like-minded people, and returning home feeling healthier, happier, and inspired.
-          </p>
-          <p className={styles.aboutText}>
-            Whether you’re watching the sunrise in the mountains, practicing yoga by a lake, dancing under the stars at our DJ night, or sharing stories with new friends over dinner, every Soulcation is designed to help you reconnect—with yourself and with others.
+            We believe a retreat shouldn’t just be about yoga. It’s about exploring breathtaking destinations, meeting like-minded people, and returning home feeling healthier and inspired. Whether watching the sunrise, practicing yoga by a lake, or sharing stories over dinner, every moment is crafted to help you reconnect.
           </p>
         </motion.div>
 
+        {/* Right Column */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className={styles.philosophyBlock}
+          className={styles.aboutCardColumn}
         >
-          <div className={styles.philosophyHeader}>
-            <h2 className={styles.aboutSuperTitle}>Our Philosophy</h2>
-            <h3 className={styles.philosophyTitle}>Heal. Explore. Connect. Celebrate.</h3>
-            <p className={styles.aboutText}>
-              Every Soulcation Retreat is thoughtfully designed to bring together four beautiful experiences.
-            </p>
-          </div>
-
           <div className={styles.featuresCard}>
-            <h4 className={styles.featuresTitle}>More Than Just a Retreat</h4>
+            <h2 className={styles.aboutSuperTitleDark}>Our Philosophy</h2>
+            <h4 className={styles.featuresTitle}>Heal. Explore. Connect. Celebrate.</h4>
             <p className={styles.featuresSubtitle}>
-              At Soulcation Retreat, every journey is a perfect blend of:
+              Every Soulcation is a perfect blend of:
             </p>
             <ul className={styles.featuresGrid}>
               {features.map((feature, idx) => (
@@ -68,7 +59,7 @@ export default function AboutSoulcation() {
               ))}
             </ul>
             <p className={styles.featuresOutro}>
-              Because true wellness isn’t only about finding peace—it’s also about experiencing joy, connection, and living life to the fullest.
+              Because true wellness is about experiencing joy, connection, and living life to the fullest.
             </p>
           </div>
         </motion.div>
