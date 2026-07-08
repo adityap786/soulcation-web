@@ -272,6 +272,10 @@
 }
 
 .storyIntroLeft h2 {
+  display: none; /* Replaced by storyHeading */
+}
+
+.storyHeading {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   line-height: 1.1;
@@ -322,6 +326,10 @@
 }
 
 .missionBlockCompact p {
+  display: none; /* Replaced by missionText */
+}
+
+.missionText {
   font-family: var(--font-serif);
   font-size: 1.25rem;
   line-height: 1.5;
