@@ -140,56 +140,90 @@
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
-  letter-spacing: 0.05em;
-  transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s ease;
 }
 
 .whatsappButton:hover .whatsappButtonInner {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .whatsappIcon {
   width: 20px;
   height: 20px;
-  color: #25D366; /* Subtle injection of the WhatsApp brand color */
 }
-
 
 .primaryButton {
-  background-color: var(--accent-sage);
-  color: var(--bg-primary);
-  padding: 1rem 2.5rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(169, 181, 168, 0.9); /* var(--accent-sage) */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 500;
   font-size: 1rem;
-  border-radius: 2px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   transition: all 0.3s ease;
-  border: 1px solid var(--accent-sage);
   cursor: pointer;
 }
-
 .primaryButton:hover {
-  background-color: transparent;
-  color: var(--accent-sage);
+  background: rgba(169, 181, 168, 1);
+  transform: translateY(-2px);
 }
 
 .secondaryButton {
-  background-color: transparent;
-  color: var(--bg-primary);
-  padding: 1rem 2.5rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 500;
   font-size: 1rem;
-  border-radius: 2px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   transition: all 0.3s ease;
-  border: 1px solid var(--bg-primary);
   cursor: pointer;
 }
-
 .secondaryButton:hover {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* SLIDER DOTS */
+.sliderDots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.sliderDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sliderDotActive {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.2);
 }
 
 /* SECTION 2: WHY WE FORGET OURSELVES */
