@@ -10,6 +10,7 @@ const slides = [
   {
     id: 1,
     image: "https://res.cloudinary.com/tpd0b4xt/image/upload/v1783021140/tirthan-valley_qqcntz.jpg",
+    objectPosition: "center 75%",
     superTitle: "",
     titleLines: ["Where teams", "remember how to talk."],
     subtitle: "Boardrooms can't fix burnout. We host high-impact leadership retreats in a quiet mountain valley—designed for unplugged strategy, deep restoration, and the kind of conversations that don't happen over Zoom.",
@@ -24,6 +25,7 @@ const slides = [
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?q=80&w=2000&auto=format&fit=crop",
+    objectPosition: "center center",
     superTitle: "Yoga Retreats",
     titleLines: ["Escape. Heal.", "Transform."],
     subtitle: "Luxury Yoga Retreats designed to help you reconnect with yourself through yoga, meditation, sound healing, nature, and mindful travel.",
@@ -35,6 +37,7 @@ const slides = [
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000&auto=format&fit=crop",
+    objectPosition: "center center",
     superTitle: "Corporate Wellness",
     titleLines: ["A Healthy Team is a", "Productive Team"],
     subtitle: "Corporate Yoga, Meditation, Stress Management & Wellness Programs customized for your employees to improve physical health, mental well-being, and workplace productivity.",
@@ -90,7 +93,7 @@ export default function HeroSection() {
               priority={currentSlide === 0}
               unoptimized
               sizes="100vw"
-              style={{ objectPosition: "center 75%" }}
+              style={{ objectPosition: slide.objectPosition || "center center" }}
               className={styles.heroImage}
             />
             <div className={styles.heroOverlay}></div>
