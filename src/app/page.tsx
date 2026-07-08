@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import HeroSection from "@/components/HeroSection";
+import StorySection from "@/components/StorySection";
 import EmpathySection from "@/components/EmpathySection";
 import CollageSection from "@/components/CollageSection";
 import TransformationSection from "@/components/TransformationSection";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <HeroSection />
+      <StorySection />
       <EmpathySection />
       <CollageSection />
       <TransformationSection />

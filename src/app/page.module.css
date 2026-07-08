@@ -231,6 +231,196 @@
   transform: scale(1.2);
 }
 
+/* SECTION 1.5: BRAND STORY */
+.storySection {
+  padding: var(--spacing-3xl) 5vw;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-3xl);
+  overflow: hidden;
+}
+
+.storyIntro {
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.storyIntroIcon {
+  color: var(--accent-sage);
+  margin-bottom: 1rem;
+}
+
+.storyIntro h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.storyIntro h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.storyIntro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.storyPhilosophy {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.philosophyCard {
+  background: var(--bg-primary);
+  padding: 3rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.philosophyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.philosophyIconWrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(169, 181, 168, 0.15); /* sage tint */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-sage);
+}
+
+.philosophyCard h4 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.philosophyCard p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.storyFeatures {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.storyFeatures h3 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.storyFeatures p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.badgeCloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.featureBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-primary);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+
+.featureBadge:hover {
+  border-color: var(--accent-sage);
+  color: var(--accent-sage);
+  transform: translateY(-2px);
+}
+
+.storyMissionVision {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.missionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.missionBlock h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-sage);
+}
+
+.missionBlock p {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .storyPhilosophy {
+    grid-template-columns: 1fr;
+  }
+  .storyMissionVision {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .philosophyCard {
+    padding: 2rem;
+  }
+  .missionBlock p {
+    font-size: 1.5rem;
+  }
+}
+
 /* SECTION 2: WHY WE FORGET OURSELVES */
 .empathySection {
   padding: var(--spacing-3xl) 10vw;
