@@ -1299,7 +1299,7 @@
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #ffffff;
-  background-color: var(--primary);
+  background-color: var(--text-primary);
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
   display: inline-block;
@@ -1409,6 +1409,12 @@
   .featuresGrid {
     grid-template-columns: 1fr;
   }
+  .aboutSection {
+    padding: var(--spacing-lg) 5vw;
+  }
+  .featuresCard {
+    padding: 1.5rem;
+  }
 }
 
 /* SECTION: MISSION & VISION */
@@ -1449,5 +1455,16 @@
   }
   .missionBlock {
     padding: 2rem;
+  }
+  .missionSection {
+    padding: var(--spacing-xl) 5vw;
+  }
+}
+@media (max-width: 600px) {
+  .missionSection {
+    padding: var(--spacing-lg) 5vw;
+  }
+  .missionBlock {
+    padding: 1.5rem;
   }
 }
