@@ -23,7 +23,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?q=80&w=2000&auto=format&fit=crop",
     superTitle: "Yoga Retreats",
     titleLines: ["Escape. Heal.", "Transform."],
     subtitle: "Luxury Yoga Retreats designed to help you reconnect with yourself through yoga, meditation, sound healing, nature, and mindful travel.",
@@ -60,7 +60,7 @@ export default function HeroSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, 6000);
     return () => clearInterval(timer);
   }, []);
 
