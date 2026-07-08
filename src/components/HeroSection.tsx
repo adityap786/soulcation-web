@@ -23,7 +23,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2000&auto=format&fit=crop",
     superTitle: "Yoga Retreats",
     titleLines: ["Escape. Heal.", "Transform."],
     subtitle: "Luxury Yoga Retreats designed to help you reconnect with yourself through yoga, meditation, sound healing, nature, and mindful travel.",
@@ -34,7 +34,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1528605105345-5344ea20e269?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000&auto=format&fit=crop",
     superTitle: "Corporate Wellness",
     titleLines: ["A Healthy Team is a", "Productive Team"],
     subtitle: "Corporate Yoga, Meditation, Stress Management & Wellness Programs customized for your employees to improve physical health, mental well-being, and workplace productivity.",
@@ -60,7 +60,7 @@ export default function HeroSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 8000);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
