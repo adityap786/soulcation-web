@@ -1468,3 +1468,520 @@
     padding: 1.5rem;
   }
 }
+
+/* SECTION: FAQ ACCORDION */
+.faqSection {
+  padding: var(--spacing-3xl) 5vw;
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faqContainerGrid {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+.faqTextColumn {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+}
+
+.faqSuperTitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  background-color: var(--text-primary);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faqTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.faqDescription {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.faqAccordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.faqItem {
+  background: var(--bg-primary);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+  border-color: rgba(169, 181, 168, 0.3);
+}
+
+.faqTrigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  gap: 1.5rem;
+}
+
+.faqQuestion {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.faqIcon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faqItemOpen .faqIcon {
+  background: var(--accent-sage);
+  color: #fff;
+}
+
+.faqContentWrapper {
+  overflow: hidden;
+}
+
+.faqAnswer {
+  padding: 0 2rem 1.8rem 2rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .faqContainerGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  .faqTextColumn {
+    position: static;
+  }
+  .faqSection {
+    padding: var(--spacing-2xl) 5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .faqSection {
+    padding: var(--spacing-xl) 5vw;
+  }
+  .faqTrigger {
+    padding: 1.2rem 1.5rem;
+  }
+  .faqAnswer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+/* SECTION: WHY CHOOSE US */
+.whyChooseUsSection {
+  padding: var(--spacing-3xl) 5vw;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.whyChooseUsHeader {
+  margin-bottom: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.decorativeSubtitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-sage);
+  font-weight: 600;
+}
+
+.whyChooseUsTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--text-primary);
+}
+
+.whyChooseUsSubtitleText {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+.whyChooseUsGridDetailed {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-2xl) var(--spacing-lg);
+  padding: 2rem 0;
+}
+
+.whyChooseUsItemDetailed {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.2rem;
+  padding: 3rem 2rem;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border-top: 4px solid var(--accent-sage);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  margin-top: 15px; /* Extra space for the badge */
+}
+
+.whyChooseUsItemDetailed:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.featureBadge {
+  position: absolute;
+  top: -12px;
+  background-color: var(--accent-gold);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(200, 169, 126, 0.4);
+}
+
+.whyChooseUsItemTitleDetailed {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+}
+
+.whyChooseUsItemDescDetailed {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* SECTION: REVIEWS */
+.reviewsSection {
+  padding: var(--spacing-3xl) 5vw;
+  background-color: #faf9f6; /* Slightly off-white canvas feel */
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviewsHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reviewsTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--text-primary);
+}
+
+.reviewsMasonry {
+  max-width: 1200px;
+  width: 100%;
+  column-count: 3;
+  column-gap: var(--spacing-xl);
+}
+
+.canvasFrameWrapper {
+  break-inside: avoid;
+  margin-bottom: var(--spacing-xl);
+  perspective: 1000px;
+}
+
+.canvasFrame {
+  background: #ffffff;
+  border-radius: 4px;
+  border: 12px solid #ffffff; /* Canvas edge */
+  outline: 1px solid rgba(0, 0, 0, 0.05); /* Canvas shadow line */
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.08), 
+    0 5px 15px rgba(0, 0, 0, 0.04),
+    inset 0 0 20px rgba(0,0,0,0.02);
+  position: relative;
+}
+
+.reviewCard {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.quoteWatermark {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 8rem;
+  font-family: serif;
+  color: rgba(200, 169, 126, 0.1);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.starRating {
+  display: flex;
+  gap: 4px;
+  color: var(--accent-gold);
+  position: relative;
+  z-index: 1;
+}
+
+.reviewTextDetailed {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.reviewHeaderDetailed {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.reviewAvatar {
+  width: 48px;
+  height: 48px;
+  background-color: var(--accent-sage);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.reviewMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.reviewName {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.reviewTripBadge {
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reviewImageCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.polaroidImageWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.reviewImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.reviewImageCard:hover .reviewImage {
+  transform: scale(1.05);
+}
+
+.polaroidCaption {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-top: 1px solid rgba(0,0,0,0.03);
+}
+
+/* MOBILE OPTIMIZATIONS (Scroll Snapping for Long Grids) */
+@media (max-width: 900px) {
+  .whyChooseUsGridDetailed {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 2rem;
+    gap: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    /* Optional: add scroll padding to keep it aligned with screen edge */
+  }
+
+  .whyChooseUsItemDetailed {
+    min-width: 85vw;
+    scroll-snap-align: center;
+  }
+
+  .reviewsMasonry {
+    column-count: auto;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 2rem;
+    gap: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .canvasFrameWrapper {
+    min-width: 85vw;
+    scroll-snap-align: center;
+    margin-bottom: 0;
+  }
+}
+
+/* SECTION: FOOTER */
+.footer {
+  background-color: var(--text-primary);
+  color: var(--support-sand);
+  padding: var(--spacing-xl) 5vw 1rem 5vw; /* Reduced from 3xl to xl */
+  display: flex;
+  flex-direction: column;
+}
+
+.footerGrid {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  gap: var(--spacing-xl); /* Reduced from 3xl to xl */
+  padding-bottom: var(--spacing-lg); /* Reduced from 2xl to lg */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Reduced from 1.5rem */
+}
+
+.footerLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footerLink:hover {
+  color: var(--accent-gold);
+}
+
+.footerBottom {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 900px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  .footerBottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

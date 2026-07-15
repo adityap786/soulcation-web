@@ -7,16 +7,22 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footerGrid}>
         <div className={styles.footerCol}>
-          <div style={{ position: "relative", width: "450px", maxWidth: "100%", height: "150px", marginBottom: "0.5rem" }}>
+          <div style={{ position: "relative", width: "100%", height: "170px", marginBottom: "0.2rem" }}>
             <Image 
               src="/ChatGPT Image Jul 3, 2026, 01_26_11 AM.png"
               alt="Soul Cation Logo"
               fill
               unoptimized
-              style={{ objectFit: "contain", objectPosition: "left", filter: "brightness(0) invert(1)" }}
+              style={{ 
+                objectFit: "contain", 
+                objectPosition: "left", 
+                filter: "brightness(0) invert(1)",
+                transform: "scale(2.5) translateX(-30px)",
+                transformOrigin: "left center"
+              }}
             />
           </div>
-          <p style={{ color: "var(--support-sand)", lineHeight: 1.6, maxWidth: "250px" }}>
+          <p style={{ color: "var(--support-sand)", lineHeight: 1.6, whiteSpace: "nowrap" }}>
             Curated premium wellness experiences designed to bring clarity, presence, and profound healing.
           </p>
         </div>

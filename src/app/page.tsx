@@ -4,8 +4,10 @@ import EmpathySection from "@/components/EmpathySection";
 import CollageSection from "@/components/CollageSection";
 import TransformationSection from "@/components/TransformationSection";
 import JourneySection from "@/components/JourneySection";
-import TrustSection from "@/components/TrustSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import ReviewsSection from "@/components/ReviewsSection";
 import MountainSection from "@/components/MountainSection";
+import FaqSection from "@/components/FaqSection";
 import FounderSection from "@/components/FounderSection";
 import FormSection from "@/components/FormSection";
 import Footer from "@/components/Footer";
@@ -22,8 +24,10 @@ export default function Home() {
       <TransformationSection />
       <MissionVisionSection />
       <JourneySection />
-      <TrustSection />
+      <WhyChooseUsSection />
+      <ReviewsSection />
       <MountainSection />
+      <FaqSection />
       <FounderSection />
       <FormSection />
       <Footer />
