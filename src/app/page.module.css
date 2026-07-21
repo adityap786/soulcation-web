@@ -1124,8 +1124,8 @@
   .inputField input,
   .inputField select,
   .inputField textarea {
-    padding: 1rem;
-    font-size: 16px; /* 16px prevents automatic zoom on iOS Safari */
+    padding: 0.8rem;
+    font-size: 14px; /* Decreased font size for mobile as requested */
     width: 100%;
     min-width: 100%;
   }
@@ -1903,19 +1903,16 @@
   }
 
   .reviewsMasonry {
-    column-count: auto;
+    column-count: 1;
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    flex-direction: column;
     padding-bottom: 2rem;
     gap: 1.5rem;
-    -webkit-overflow-scrolling: touch;
   }
 
   .canvasFrameWrapper {
-    min-width: 85vw;
-    scroll-snap-align: center;
-    margin-bottom: 0;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1979,9 +1976,29 @@
   .footerGrid {
     grid-template-columns: 1fr;
   }
+  .footerCol {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    word-break: break-word;
+  }
   .footerBottom {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+}
+
+/* Mobile Hero Optimization */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+  }
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+  .whatsappButtonInner, .primaryButton, .secondaryButton {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
   }
 }

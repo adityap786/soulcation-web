@@ -9,11 +9,11 @@ import Link from "next/link";
 const slides = [
   {
     id: 1,
-    image: "https://res.cloudinary.com/tpd0b4xt/image/upload/v1783021140/tirthan-valley_qqcntz.jpg",
-    objectPosition: "center 75%",
-    superTitle: "",
-    titleLines: ["Where teams", "remember how to talk."],
-    subtitle: "Boardrooms can't fix burnout. We host high-impact leadership retreats in a quiet mountain valley—designed for unplugged strategy, deep restoration, and the kind of conversations that don't happen over Zoom.",
+    image: "https://res.cloudinary.com/dl4mlw1dl/image/upload/v1784593654/WhatsApp_Image_2026-07-21_at_5.29.41_AM_gvp93v.jpg",
+    objectPosition: "center center",
+    superTitle: "Corporate Wellness",
+    titleLines: ["Elevate Your Team.", "Heal in the Mountains."],
+    subtitle: "Step out of the boardroom and into nature. Our corporate retreats combine sound healing, breathwork, and yoga with the thrill of mountain adventure to deeply restore and reconnect your team.",
     buttons: [
       {
         text: "Inquire via WhatsApp",
@@ -24,26 +24,17 @@ const slides = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?q=80&w=2000&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/dl4mlw1dl/image/upload/v1784593613/ChatGPT_Image_Jul_21_2026_05_56_15_AM_rsvskn.webp",
     objectPosition: "center center",
-    superTitle: "Yoga Retreats",
-    titleLines: ["Escape. Heal.", "Transform."],
-    subtitle: "Luxury Yoga Retreats designed to help you reconnect with yourself through yoga, meditation, sound healing, nature, and mindful travel.",
+    superTitle: "Soulful Group Journeys",
+    titleLines: ["Find Your Tribe.", "Find Yourself."],
+    subtitle: "Travel isn't just about the destinations; it's about the people you share them with. Join a community of like-minded souls, forge lifelong bonds, and experience a journey that heals and stays with you forever.",
     buttons: [
-      { text: "Explore Retreats", link: "#destinations", type: "primary" },
-      { text: "Book Now", link: "#contact", type: "secondary" }
-    ]
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000&auto=format&fit=crop",
-    objectPosition: "center center",
-    superTitle: "Corporate Wellness",
-    titleLines: ["A Healthy Team is a", "Productive Team"],
-    subtitle: "Corporate Yoga, Meditation, Stress Management & Wellness Programs customized for your employees to improve physical health, mental well-being, and workplace productivity.",
-    buttons: [
-      { text: "Corporate Programs", link: "#corporate", type: "primary" },
-      { text: "Request a Proposal", link: "#contact", type: "secondary" }
+      {
+        text: "Inquire via WhatsApp",
+        link: "https://wa.me/1234567890",
+        type: "whatsapp"
+      }
     ]
   }
 ];

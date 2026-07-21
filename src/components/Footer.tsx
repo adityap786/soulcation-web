@@ -22,7 +22,7 @@ export default function Footer() {
               }}
             />
           </div>
-          <p style={{ color: "var(--support-sand)", lineHeight: 1.6, whiteSpace: "nowrap" }}>
+          <p style={{ color: "var(--support-sand)", lineHeight: 1.6 }}>
             Curated premium wellness experiences designed to bring clarity, presence, and profound healing.
           </p>
         </div>

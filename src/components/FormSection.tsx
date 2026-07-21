@@ -37,10 +37,10 @@ export default function FormSection() {
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             className={styles.formWrapper}
-            style={{ textAlign: "center", padding: "4rem" }}
+            style={{ textAlign: "center", padding: "2rem 1rem" }}
           >
-            <h3 style={{ fontSize: "1.5rem", color: "var(--accent-sage)", marginBottom: "1rem" }}>Inquiry Sent Successfully</h3>
-            <p style={{ color: "var(--text-secondary)" }}>Thank you for reaching out. We will connect with you soon.</p>
+            <h3 style={{ fontSize: "1.25rem", color: "var(--accent-sage)", marginBottom: "1rem" }}>Inquiry Sent Successfully</h3>
+            <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem" }}>Thank you for reaching out. We will connect with you soon.</p>
           </motion.div>
         ) : (
           <motion.form
