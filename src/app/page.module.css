@@ -44,7 +44,13 @@
   position: absolute;
   inset: 0;
   /* Extremely transparent top/bottom vignette to keep the valley image vibrant and sharp */
-  background: linear-gradient(to top, rgba(12, 28, 18, 0.4) 0%, transparent 40%, transparent 80%, rgba(12, 28, 18, 0.3) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(10, 20, 12, 0.65) 0%,
+    rgba(10, 20, 12, 0.35) 35%,
+    rgba(10, 20, 12, 0.35) 65%,
+    rgba(10, 20, 12, 0.55) 100%
+  );
   z-index: 1;
 }
 
@@ -56,9 +62,16 @@
   align-items: center;
   text-align: center;
   gap: var(--spacing-sm);
-  padding: 0 5vw;
+  padding: 3rem 4vw;
   max-width: 850px;
   width: 100%;
+  /* Glassmorphism panel */
+  background: rgba(10, 15, 10, 0.35);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 .heroSuperTitle {
@@ -2000,5 +2013,10 @@
   .whatsappButtonInner, .primaryButton, .secondaryButton {
     padding: 0.8rem 1.2rem;
     font-size: 0.9rem;
+  }
+  .heroContent {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    max-width: 95vw;
   }
 }
