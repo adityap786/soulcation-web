@@ -46,10 +46,10 @@
   /* Extremely transparent top/bottom vignette to keep the valley image vibrant and sharp */
   background: linear-gradient(
     to top,
-    rgba(10, 20, 12, 0.65) 0%,
-    rgba(10, 20, 12, 0.35) 35%,
-    rgba(10, 20, 12, 0.35) 65%,
-    rgba(10, 20, 12, 0.55) 100%
+    rgba(10, 20, 12, 0.45) 0%,
+    rgba(10, 20, 12, 0.15) 35%,
+    rgba(10, 20, 12, 0.15) 65%,
+    rgba(10, 20, 12, 0.35) 100%
   );
   z-index: 1;
 }
