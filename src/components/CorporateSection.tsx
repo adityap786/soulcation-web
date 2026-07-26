@@ -1,56 +1,113 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import styles from "../app/page.module.css";
-import Image from "next/image";
+
+const accordionData = [
+  {
+    title: "🧘 Reduces Stress & Anxiety",
+    content: "Improve emotional well-being and workplace happiness.",
+  },
+  {
+    title: "💻 Boosts Productivity",
+    content: "Sharper focus, better decision-making, and improved efficiency.",
+  },
+  {
+    title: "❤️ Supports Physical Health",
+    content: "Relieves back pain, neck stiffness, and posture issues caused by desk jobs.",
+  },
+  {
+    title: "🌿 Improves Work-Life Balance",
+    content: "Encourages mindfulness and reduces burnout.",
+  },
+  {
+    title: "🤝 Enhances Team Engagement",
+    content: "Creates a positive, energetic, and collaborative work environment.",
+  },
+];
+
+function AccordionItem({ item, isOpen, onClick }: { item: any; isOpen: boolean; onClick: () => void }) {
+  return (
+    <div className={styles.accordionItem}>
+      <button className={styles.accordionHeader} onClick={onClick}>
+        <span className={styles.accordionTitle}>{item.title}</span>
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <ChevronDown size={20} className={styles.accordionIcon} />
+        </motion.div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className={styles.accordionContentWrapper}
+          >
+            <div className={styles.accordionContent}>
+              {item.content}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default function CorporateSection() {
-  return (
-    <section className={styles.corporateSection}>
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-        style={{ position: "relative", width: "100%", aspectRatio: "4/3", borderRadius: "4px", overflow: "hidden" }}
-      >
-        <Image
-          src="/transformation.png" /* Reusing this as a calming fallback */
-          alt="Corporate Wellness"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </motion.div>
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "var(--spacing-lg)" }}>
-        <motion.h2 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1 }}
-          style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontFamily: "var(--font-serif)" }}
-        >
-          Healthy Teams Build Extraordinary Companies.
-        </motion.h2>
-        <motion.p 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, delay: 0.2 }}
-          style={{ fontSize: "1.125rem", lineHeight: 1.8, color: "var(--text-muted)" }}
-        >
-          Burnout is not a badge of honor. Our bespoke corporate wellness programs are designed to restore focus, foster genuine connection among leadership teams, and introduce sustainable mindfulness practices into your company culture.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
-          <button className={styles.secondaryButton} style={{ borderColor: "var(--text-primary)", color: "var(--text-primary)", marginTop: "1rem" }}>
-            Explore Corporate Wellness
-          </button>
-        </motion.div>
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <section className={styles.corporateSectionDetailed}>
+      <div className={styles.corporateContainer}>
+        {/* Left Side: Copy & CTA */}
+        <div className={styles.corporateCopy}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h4 className={styles.corporateSuperTitle}>Corporate Wellness Through Yoga</h4>
+            <h2 className={styles.corporateTitle}>Healthy Employees. Stronger Organizations.</h2>
+            <p className={styles.corporateSubtitle}>
+              Transform workplace wellness with expert-led yoga sessions designed to improve physical health, mental clarity, and employee engagement.
+            </p>
+            <h3 className={styles.corporateHighlight}>Build a Healthier, Happier Workplace</h3>
+            
+          </motion.div>
+        </div>
+
+        {/* Right Side: Accordion */}
+        <div className={styles.corporateAccordion}>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h3 className={styles.accordionSectionTitle}>Why Choose Corporate Yoga?</h3>
+            <div className={styles.accordionList}>
+              {accordionData.map((item, index) => (
+                <AccordionItem
+                  key={index}
+                  item={item}
+                  isOpen={openIndex === index}
+                  onClick={() => handleToggle(index)}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

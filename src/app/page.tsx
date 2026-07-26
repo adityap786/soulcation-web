@@ -3,12 +3,10 @@ import HeroSection from "@/components/HeroSection";
 import EmpathySection from "@/components/EmpathySection";
 import CollageSection from "@/components/CollageSection";
 import TransformationSection from "@/components/TransformationSection";
-import JourneySection from "@/components/JourneySection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import CorporateSection from "@/components/CorporateSection";
 import ReviewsSection from "@/components/ReviewsSection";
-import MountainSection from "@/components/MountainSection";
 import FaqSection from "@/components/FaqSection";
-import FounderSection from "@/components/FounderSection";
 import FormSection from "@/components/FormSection";
 import Footer from "@/components/Footer";
 import AboutSoulcation from "@/components/AboutSoulcation";
@@ -23,12 +21,10 @@ export default function Home() {
       <CollageSection />
       <TransformationSection />
       <MissionVisionSection />
-      <JourneySection />
       <WhyChooseUsSection />
+      <CorporateSection />
       <ReviewsSection />
-      <MountainSection />
       <FaqSection />
-      <FounderSection />
       <FormSection />
       <Footer />
     </main>

@@ -17,7 +17,7 @@ const slides = [
     buttons: [
       {
         text: "Inquire via WhatsApp",
-        link: "https://wa.me/1234567890",
+        link: "#contact",
         type: "whatsapp"
       }
     ]
@@ -32,7 +32,7 @@ const slides = [
     buttons: [
       {
         text: "Inquire via WhatsApp",
-        link: "https://wa.me/1234567890",
+        link: "#contact",
         type: "whatsapp"
       }
     ]
@@ -62,6 +62,7 @@ export default function HeroSection() {
 
   return (
     <section ref={container} className={styles.hero}>
+      <a href="#contact" style={{ display: "block", width: "100%", maxWidth: "1250px", margin: "0 auto", cursor: "pointer" }}>
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -82,7 +83,8 @@ export default function HeroSection() {
               alt={slide.titleLines.join(" ")}
               width={1920}
               height={1080}
-              priority={currentSlide === 0}
+              priority={true}
+              loading="eager"
               unoptimized
               style={{ width: "100%", height: "100%", display: "block" }}
               className={styles.heroImage}
@@ -90,9 +92,7 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
       </AnimatePresence>
-
-
-
+      </a>
       {/* Slider Indicators */}
       <div className={styles.sliderDots}>
         {slides.map((_, idx) => (
