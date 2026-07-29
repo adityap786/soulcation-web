@@ -52,38 +52,43 @@ export default function HeroSection() {
   return (
     <section ref={container} className={styles.hero}>
       <div className={styles.heroSliderWrapper}>
-        {/* Clicking the image scrolls to the contact form */}
-        <a href="#contact" style={{ display: "block", width: "100%", cursor: "pointer" }}>
-          <AnimatePresence mode="wait">
+        {/* Slides — crossfade */}
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={currentSlide}
+            className={styles.heroImageContainer}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
             <motion.div
-              key={currentSlide}
-              className={styles.heroImageContainer}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className={styles.heroImageWrapper}
+              initial={{ scale: 1.03 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 8, ease: "easeOut" }}
             >
-              <motion.div
-                className={styles.heroImageWrapper}
-                initial={{ scale: 1.05 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 10, ease: "easeOut" }}
-              >
-                <Image
-                  src={slide.image}
-                  alt={slide.titleLines.join(" ")}
-                  width={1920}
-                  height={1080}
-                  priority={true}
-                  loading="eager"
-                  unoptimized
-                  style={{ width: "100%", height: "100%", display: "block" }}
-                  className={styles.heroImage}
-                />
-              </motion.div>
+              <Image
+                src={slide.image}
+                alt={slide.titleLines.join(" ")}
+                width={1920}
+                height={1080}
+                priority={true}
+                loading="eager"
+                unoptimized
+                style={{ width: "100%", height: "100%", display: "block" }}
+                className={styles.heroImage}
+              />
             </motion.div>
-          </AnimatePresence>
-        </a>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Transparent click-to-form overlay (below arrows) */}
+        <a
+          href="#contact"
+          aria-label="Book your journey"
+          style={{ position: "absolute", inset: 0, zIndex: 5 }}
+        />
 
         {/* Left Arrow */}
         <button
