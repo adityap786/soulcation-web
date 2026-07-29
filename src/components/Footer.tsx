@@ -13,8 +13,15 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerGrid}>
-        <div className={styles.footerCol}>
-          <div style={{ position: "relative", width: "100%", height: "170px", marginBottom: "0.2rem" }}>
+        <div className={styles.footerCol} style={{ isolation: "isolate" }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            height: "170px",
+            marginBottom: "0.2rem",
+            overflow: "hidden",
+            pointerEvents: "none"
+          }}>
             <Image
               src="/ChatGPT Image Jul 3, 2026, 01_26_11 AM.png"
               alt="Soul Cation Logo"
@@ -25,7 +32,8 @@ export default function Footer() {
                 objectPosition: "left",
                 filter: "brightness(0) invert(1)",
                 transform: "scale(2.5) translateX(-30px)",
-                transformOrigin: "left center"
+                transformOrigin: "left center",
+                pointerEvents: "none"
               }}
             />
           </div>
@@ -34,13 +42,13 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className={styles.footerCol}>
+        <div className={styles.footerCol} style={{ position: "relative", zIndex: 1 }}>
           <h4 style={{ textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "0.875rem", marginBottom: "1rem", color: "var(--support-sand)" }}>Explore</h4>
           <button className={styles.footerLink} onClick={() => scrollTo("transformation")}>The Experience</button>
           <button className={styles.footerLink} onClick={() => scrollTo("corporate")}>Corporate Wellness</button>
         </div>
 
-        <div className={styles.footerCol}>
+        <div className={styles.footerCol} style={{ position: "relative", zIndex: 1 }}>
           <h4 style={{ textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "0.875rem", marginBottom: "1rem", color: "var(--support-sand)" }}>Connect</h4>
           <a
             href="https://www.instagram.com/soulcation_retreats?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
