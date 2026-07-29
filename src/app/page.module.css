@@ -16,6 +16,74 @@
   background-color: var(--bg-primary);
 }
 
+.heroSliderWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.sliderArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sliderArrow:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.sliderArrowLeft {
+  left: 1rem;
+}
+
+.sliderArrowRight {
+  right: 1rem;
+}
+
+.slideCounter {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .sliderArrow {
+    width: 36px;
+    height: 36px;
+  }
+  .sliderArrowLeft {
+    left: 0.5rem;
+  }
+  .sliderArrowRight {
+    right: 0.5rem;
+  }
+}
+
 .heroImageContainer {
   position: relative;
   width: 100%;
@@ -2067,7 +2135,66 @@
 @media (max-width: 900px) {
   .corporateContainer {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .corporateSectionDetailed {
+    padding: 8vw 5vw;
+  }
+
+  .corporateCopy {
+    gap: 1rem;
+  }
+
+  .corporateSuperTitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0;
+  }
+
+  .corporateTitle {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    line-height: 1.25;
+  }
+
+  .corporateSubtitle {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .corporateHighlight {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .corporateAccordion {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+
+  .accordionSectionTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .accordionTitle {
+    font-size: 0.95rem;
+  }
+
+  .accordionHeader {
+    padding: 0.75rem 0;
+  }
+
+  .accordionContent {
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+  }
+
+  .accordionList {
+    gap: 0.5rem;
   }
 }
 
