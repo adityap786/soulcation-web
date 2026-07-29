@@ -73,7 +73,6 @@ export default function HeroSection() {
                 alt={slide.titleLines.join(" ")}
                 width={1920}
                 height={1080}
-                priority={true}
                 loading="eager"
                 unoptimized
                 style={{ width: "100%", height: "100%", display: "block" }}

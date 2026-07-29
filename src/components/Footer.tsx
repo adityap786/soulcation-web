@@ -30,7 +30,7 @@ export default function Footer() {
         <div className={styles.footerCol}>
           <h4 style={{ textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "0.875rem", marginBottom: "1rem", color: "var(--support-sand)" }}>Explore</h4>
           <Link href="#transformation" className={styles.footerLink}>The Experience</Link>
-          <Link href="#founder" className={styles.footerLink}>About Shabista</Link>
+          <Link href="#corporate" className={styles.footerLink}>Corporate Wellness</Link>
         </div>
 
         <div className={styles.footerCol}>

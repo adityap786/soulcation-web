@@ -67,7 +67,7 @@ export default function CorporateSection() {
   };
 
   return (
-    <section className={styles.corporateSectionDetailed}>
+    <section id="corporate" className={styles.corporateSectionDetailed}>
       <div className={styles.corporateContainer}>
         {/* Left Side: Copy & CTA */}
         <div className={styles.corporateCopy}>
