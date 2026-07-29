@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import styles from "../app/page.module.css";
@@ -10,13 +10,11 @@ const slides = [
   {
     id: 1,
     image: "https://res.cloudinary.com/dl4mlw1dl/image/upload/v1784679655/ChatGPT_Image_Jul_22_2026_05_50_26_AM_suzscs.webp",
-    objectPosition: "center center",
     titleLines: ["Elevate Your Team.", "Heal in the Mountains."],
   },
   {
     id: 2,
     image: "https://res.cloudinary.com/dl4mlw1dl/image/upload/v1784679996/ChatGPT_Image_Jul_22_2026_05_54_53_AM_stsobx.webp",
-    objectPosition: "center center",
     titleLines: ["Find Your Tribe.", "Find Yourself."],
   },
 ];
@@ -38,20 +36,31 @@ export default function HeroSection() {
   }, []);
 
   const goToPrev = (e: React.MouseEvent) => {
-    e.preventDefault();
+    e.stopPropagation();
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   const goToNext = (e: React.MouseEvent) => {
-    e.preventDefault();
+    e.stopPropagation();
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  // Clicking the slider wrapper scrolls to the contact form
+  const handleSliderClick = () => {
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   const slide = slides[currentSlide];
 
   return (
     <section ref={container} className={styles.hero}>
-      <div className={styles.heroSliderWrapper}>
+      {/* Slider wrapper — clicking it scrolls to #contact */}
+      <div
+        className={styles.heroSliderWrapper}
+        onClick={handleSliderClick}
+        style={{ cursor: "pointer" }}
+      >
         {/* Slides — crossfade */}
         <AnimatePresence mode="sync">
           <motion.div
@@ -82,14 +91,7 @@ export default function HeroSection() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Transparent click-to-form overlay (below arrows) */}
-        <a
-          href="#contact"
-          aria-label="Book your journey"
-          style={{ position: "absolute", inset: 0, zIndex: 5 }}
-        />
-
-        {/* Left Arrow */}
+        {/* Left Arrow — stopPropagation so it doesn't trigger the slider click */}
         <button
           className={`${styles.sliderArrow} ${styles.sliderArrowLeft}`}
           onClick={goToPrev}
