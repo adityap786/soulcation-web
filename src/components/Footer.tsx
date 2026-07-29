@@ -1,5 +1,4 @@
 import styles from "../app/page.module.css";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
@@ -29,22 +28,29 @@ export default function Footer() {
         
         <div className={styles.footerCol}>
           <h4 style={{ textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "0.875rem", marginBottom: "1rem", color: "var(--support-sand)" }}>Explore</h4>
-          <Link href="#transformation" className={styles.footerLink}>The Experience</Link>
-          <Link href="#corporate" className={styles.footerLink}>Corporate Wellness</Link>
+          <a href="#transformation" className={styles.footerLink}>The Experience</a>
+          <a href="#corporate" className={styles.footerLink}>Corporate Wellness</a>
         </div>
 
         <div className={styles.footerCol}>
           <h4 style={{ textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "0.875rem", marginBottom: "1rem", color: "var(--support-sand)" }}>Connect</h4>
-          <Link href="https://www.instagram.com/soulcation_retreats?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Instagram</Link>
-          <Link href="#contact" className={styles.footerLink}>Contact Us</Link>
+          <a
+            href="https://www.instagram.com/soulcation_retreats?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.footerLink}
+          >
+            Instagram
+          </a>
+          <a href="#contact" className={styles.footerLink}>Contact Us</a>
         </div>
       </div>
 
       <div className={styles.footerBottom}>
         <span>© {new Date().getFullYear()} Soul Cation Retreat. All rights reserved.</span>
         <div style={{ display: "flex", gap: "1.5rem" }}>
-          <Link href="#" className={styles.footerLink}>Privacy Policy</Link>
-          <Link href="#" className={styles.footerLink}>Terms of Service</Link>
+          <a href="#contact" className={styles.footerLink}>Privacy Policy</a>
+          <a href="#contact" className={styles.footerLink}>Terms of Service</a>
         </div>
       </div>
     </footer>
