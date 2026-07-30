@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 5vw;
-  height: 76px;
+  height: 96px;
   transition: background 0.35s ease, box-shadow 0.35s ease;
   will-change: transform;
 }
@@ -50,8 +50,8 @@
 
 .navLogoImageWrap {
   position: relative;
-  width: 280px;
-  height: 72px;
+  width: 420px;
+  height: 100px;
   flex-shrink: 0;
 }
 
@@ -150,7 +150,7 @@
 /* ---- Mobile Drawer ---- */
 .navMobileDrawer {
   position: fixed;
-  top: 76px;
+  top: 96px;
   left: 0;
   right: 0;
   z-index: 998;
@@ -211,14 +211,14 @@
 /* ---- Responsive breakpoints ---- */
 @media (max-width: 900px) {
   .navLogoImageWrap {
-    width: 240px;
-    height: 64px;
+    width: 360px;
+    height: 88px;
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
-    height: 64px;
+    height: 82px;
     padding: 0 5vw;
   }
   .navLinks {
@@ -230,18 +230,24 @@
     justify-content: center;
   }
   .navLogoImageWrap {
-    width: 200px;
-    height: 58px;
+    width: 290px;
+    height: 76px;
   }
   .navMobileDrawer {
-    top: 64px;
+    top: 82px;
   }
 }
 
 @media (max-width: 380px) {
+  .navbar {
+    height: 74px;
+  }
   .navLogoImageWrap {
-    width: 170px;
-    height: 50px;
+    width: 240px;
+    height: 64px;
+  }
+  .navMobileDrawer {
+    top: 74px;
   }
 }
 
