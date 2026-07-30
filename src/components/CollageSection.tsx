@@ -173,7 +173,7 @@ function LazyVideo({ src, poster, className, isPriority = false }: LazyVideoProp
 
 export default function CollageSection() {
   return (
-    <section className={styles.collageSection}>
+    <section id="gallery" className={styles.collageSection}>
       <div className={styles.collageHeader}>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

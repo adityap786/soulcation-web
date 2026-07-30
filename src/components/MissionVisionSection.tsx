@@ -5,7 +5,7 @@ import styles from "../app/page.module.css";
 
 export default function MissionVisionSection() {
   return (
-    <section className={styles.missionSection}>
+    <section id="mission" className={styles.missionSection}>
       <div className={styles.missionContainer}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

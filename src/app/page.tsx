@@ -11,10 +11,12 @@ import FormSection from "@/components/FormSection";
 import Footer from "@/components/Footer";
 import AboutSoulcation from "@/components/AboutSoulcation";
 import MissionVisionSection from "@/components/MissionVisionSection";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Navbar />
       <HeroSection />
       <EmpathySection />
       <AboutSoulcation />
