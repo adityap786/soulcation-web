@@ -53,6 +53,7 @@
   width: 420px;
   height: 100px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 /* ---- Desktop Nav Links ---- */
