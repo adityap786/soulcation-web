@@ -2460,7 +2460,7 @@
 .corporateCopy {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0;
 }
 
 .corporateSuperTitle {
@@ -2469,7 +2469,7 @@
   letter-spacing: 0.15em;
   color: var(--accent-sage);
   font-weight: 700;
-  margin-bottom: -0.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .corporateTitle {
@@ -2477,20 +2477,22 @@
   font-family: var(--font-serif);
   color: var(--text-primary);
   line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
 .corporateSubtitle {
   font-size: 1.125rem;
   line-height: 1.8;
   color: var(--text-muted);
+  margin-bottom: 2rem;
 }
 
 .corporateHighlight {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 .premiumCorporateButton {
