@@ -88,7 +88,7 @@ export default function Navbar() {
                 filter: atTop
                   ? "brightness(0) invert(1)"
                   : "brightness(0) contrast(1)",
-                transform: "scale(2.2)",
+                transform: "translateY(15px) scale(2.2)",
                 transformOrigin: "left center",
                 pointerEvents: "none",
               }}
