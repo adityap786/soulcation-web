@@ -26,8 +26,8 @@ export default function Navbar() {
   const accumulatedDown = useRef(0); // How many px scrolled downward in current streak
 
   useEffect(() => {
-    const HIDE_THRESHOLD = 80;  // px of continuous downward scroll before hiding
-    const SHOW_AFTER = 120;     // px from top after which hide-on-scroll kicks in
+    const HIDE_THRESHOLD = 300; // px of continuous downward scroll before hiding
+    const SHOW_AFTER = 600;     // px from top after which hide-on-scroll kicks in
 
     const handleScroll = () => {
       const currentY = window.scrollY;
