@@ -14,7 +14,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "https://res.cloudinary.com/dl4mlw1dl/image/upload/v1784679996/ChatGPT_Image_Jul_22_2026_05_54_53_AM_stsobx.webp",
+    image: "https://res.cloudinary.com/dl4mlw1dl/image/upload/v1785456147/ChatGPT_Image_Jul_31_2026_05_32_18_AM_mni7hl.png",
     titleLines: ["Find Your Tribe.", "Find Yourself."],
   },
 ];
